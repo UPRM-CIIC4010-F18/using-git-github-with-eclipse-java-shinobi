@@ -24,8 +24,30 @@ public class JobHandler {
 		int currentRank = 0;
 		int warningDeRank = 0;
 		
-		//Add Code Here [You have to use Switch and If/Else to get graded] 
-		
+		if ( yearlySalary < 10000) {
+			currentRank = 20;
+		} else if (yearlySalary < 50000){
+			currentRank = 40;
+		} else if (yearlySalary < 100000){
+			currentRank = 60;
+	} else{
+		currentRank = 80;
+} switch (warningTotals){
+case 0: 
+	break;
+case 1:
+	warningDeRank += 5;
+	break;
+case 2:
+	warningDeRank += 10;
+	break;
+case 3:
+	warningDeRank += 15;
+	break;
+	default:
+		warningDeRank = warningTotals*6;
+		break;
+}
 		return currentRank - warningDeRank;
 	}
 	
